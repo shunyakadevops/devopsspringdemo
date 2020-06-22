@@ -2,7 +2,7 @@ buildPack: maven
 pipelineConfig:
   pipelines:
     pullRequest:
-      build:
+      prebuild:
         steps:
         - name: sonar-scan-pr
           sh:  mvn sonar:sonar -Dsonar.host.url=http://18.210.22.128:9000 -Dsonar.login=b10eff7e52549ebc35913e637475b411d186d469 
